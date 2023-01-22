@@ -37,6 +37,8 @@ You can create a native executable using:
 ```shell script
 ./mvnw package -Pnative
 ```
+## https://piotrminkowski.com/2021/04/14/advanced-graphql-with-quarkus/
+
 
 Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
 ```shell script
