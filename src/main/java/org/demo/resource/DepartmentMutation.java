@@ -22,7 +22,7 @@ public class DepartmentMutation {
     }
 
     @Mutation("newDepartment")
-    public Department newDepartment(@Name("input") DepartmentInput departmentInput) {
+    public Department newDepartment(@Name("data") DepartmentInput departmentInput) {
         Organization organization = organizationRepository.findById(departmentInput.getOrganizationId());
         Department department = new Department(null, departmentInput.getName(), null, organization);
         departmentRepository.persist(department);

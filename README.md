@@ -7,10 +7,17 @@ This project uses Quarkus, the Supersonic Subatomic Java Framework.
 ### GraphQL Examples
 ```shell script
 mutation {
- newOrganization(data: {name: "ERC"} ) {
+ newOrganization(data: {name: "Acme"} ) {
    id
  }  } 
 ```
+```shell script
+mutation {
+ newDepartment(data: {name: "Marketing", organizationId: "1"} ) {
+   id
+ }  }
+```
+
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
 
