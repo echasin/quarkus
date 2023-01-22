@@ -5,10 +5,12 @@ This project uses Quarkus, the Supersonic Subatomic Java Framework.
 ## Resources
 - 
 ### GraphQL Examples
-'mutation {
- newOrganization(data: {name: "ERC1"} ) {
+```shell script
+mutation {
+ newOrganization(data: {name: "ERC"} ) {
    id
- }  } '
+ }  } 
+```
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
 
