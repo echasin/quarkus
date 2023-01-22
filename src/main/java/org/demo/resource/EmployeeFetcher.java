@@ -9,7 +9,10 @@ import org.demo.repository.EmployeeRepository;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 @GraphQLApi
+@Transactional
 public class EmployeeFetcher {
 
     private EmployeeRepository repository;

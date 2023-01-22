@@ -39,6 +39,11 @@ You can create a native executable using:
 ```
 ## https://piotrminkowski.com/2021/04/14/advanced-graphql-with-quarkus/
 
+'mutation {
+ newOrganization(data: {name: "ERC1"} ) {
+   id
+ }  }'
+
 
 Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
 ```shell script
