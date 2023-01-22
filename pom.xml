@@ -66,6 +66,15 @@
             <artifactId>instancio-junit</artifactId>
             <version>2.4.0</version>
         </dependency>
+        <!--Ali-->
+        <dependency>
+          <groupId>io.quarkus</groupId>
+          <artifactId>quarkus-vertx</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>io.quarkus</groupId>
+          <artifactId>quarkus-undertow</artifactId>
+        </dependency>
   </dependencies>
   <build>
     <plugins>

@@ -25,6 +25,30 @@ Query Find by Department ID
   name
 }}
 ```
+
+Query Update Department
+```shell script
+mutation updateDepartment($data: DepartmentInputInput!) {
+  updateDepartment(data: $data) 
+}
+
+-Parameters
+
+{
+  "data": {
+    "id": 6,
+    "organizationId": 1,
+    "name": "ali alrabi 2023"
+  }
+}
+```
+
+Query to Delete by Department ID
+```shell script
+mutation deleteaaDepartment {
+  deleteDepartment(departmentId: 1) 
+}
+```
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
 
 ## Running the application in dev mode
@@ -35,6 +59,18 @@ You can run your application in dev mode that enables live coding using:
 ```
 
 > **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
+
+## Running the application in test mode
+
+./mvnw compile quarkus:dev -Dquarkus.profile=test
+
+ URL: http://localhost:9090 
+
+ To access embeded h2 database
+ 
+ URL: http://localhost:9090/h2
+ Username: admin
+ Password: admin
 
 ## Packaging and running the application
 
