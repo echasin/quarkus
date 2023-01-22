@@ -5,6 +5,7 @@ This project uses Quarkus, the Supersonic Subatomic Java Framework.
 ## Resources
 - 
 ### GraphQL Examples
+Mutation Create new records
 ```shell script
 mutation {
  newOrganization(data: {name: "Acme"} ) {
