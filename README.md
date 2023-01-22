@@ -17,8 +17,13 @@ mutation {
    id
  }  }
 ```
-
-
+Query Find by Department ID
+```shell script
+{department(id: 9) {
+  id,
+  name
+}}
+```
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
 
 ## Running the application in dev mode

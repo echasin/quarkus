@@ -23,7 +23,7 @@ public class DepartmentFetcher {
     }
 
     @Query("department")
-    public Department findByIdW(@Name("id") Long id) {
+    public Department findById(@Name("id") Long id) {
         return repository.findById(id);
     }
 
