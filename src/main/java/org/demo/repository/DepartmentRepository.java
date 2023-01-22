@@ -43,6 +43,12 @@ public class DepartmentRepository implements PanacheRepository<Department> {
         return em.createQuery(criteriaQuery).getResultList();
     }
 
+    
+    public Department findById(Long id) {
+        Department department = em.find(Department.class, id);
+        return department;
+    }
+    
     public Department findByIdWithCriteria(Long id) {
         CriteriaBuilder builder = em.getCriteriaBuilder();
         CriteriaQuery<Department> criteriaQuery = builder.createQuery(Department.class);
@@ -58,4 +64,6 @@ public class DepartmentRepository implements PanacheRepository<Department> {
         criteriaQuery.where(builder.equal(root.get("id"), id));
         return em.createQuery(criteriaQuery).getSingleResult();
     }
+
+  
 }

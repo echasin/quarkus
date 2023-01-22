@@ -21,11 +21,13 @@ public class EmployeeRepository implements PanacheRepository<Employee> {
         this.em = em;
     }
 
+    
+    
     public List<Employee> findByCriteria(EmployeeFilter filter) {
         CriteriaBuilder builder = em.getCriteriaBuilder();
         CriteriaQuery<Employee> criteriaQuery = builder.createQuery(Employee.class);
         Root<Employee> root = criteriaQuery.from(Employee.class);
-        Predicate predicate = null;
+        Predicate predicate = null;  
         if (filter.getSalary() != null)
             predicate = filter.getSalary().generateCriteria(builder, root.get("salary"));
         if (filter.getAge() != null)
