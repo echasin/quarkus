@@ -28,25 +28,17 @@ Query Find by Department ID
 
 Query Update Department
 ```shell script
-mutation updateDepartment($data: DepartmentInputInput!) {
-  updateDepartment(data: $data) 
+mutation {updateDepartment(data: {  id: 6,
+    organizationId: 2,
+    name: "New Department 2023"})
 }
 
--Parameters
-
-{
-  "data": {
-    "id": 6,
-    "organizationId": 1,
-    "name": "ali alrabi 2023"
-  }
-}
 ```
 
 Query to Delete by Department ID
 ```shell script
-mutation deleteaaDepartment {
-  deleteDepartment(departmentId: 1) 
+mutation deleteDepartment {
+  deleteDepartment(departmentId: 4) 
 }
 ```
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .

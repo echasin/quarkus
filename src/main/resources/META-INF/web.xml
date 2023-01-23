@@ -3,7 +3,7 @@
 	PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
 	"http://java.sun.com/dtd/web-app_2_3.dtd">
 
-<web-app>  <!--Ali add embeded h2 UI-->
+<web-app>  <!--add embeded h2 UI-->
 	<display-name>test project</display-name>
 	<servlet>
 		<servlet-name>h2-console</servlet-name>
