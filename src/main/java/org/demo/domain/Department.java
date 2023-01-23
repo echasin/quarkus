@@ -19,7 +19,7 @@ public class Department {
 	@EqualsAndHashCode.Include
 	private Long id;
 	private String name;
-	@OneToMany(mappedBy = "department")
+	@OneToMany(mappedBy = "department",cascade = CascadeType.REMOVE)  //remove cascade to delete department
 	private Set<Employee> employees;
 	@ManyToOne(fetch = FetchType.LAZY)
 	private Organization organization;

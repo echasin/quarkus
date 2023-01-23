@@ -29,4 +29,17 @@ public class DepartmentMutation {
         return department;
     }
 
+    //return int number of updated records
+    @Mutation("updateDepartment")
+    public int updateDepartment(@Name("data") DepartmentInput departmentInput) {
+       return departmentRepository.update("name = ?2 where id = ?1", departmentInput.getId(), departmentInput.getName());
+    }
+
+  
+    //return boolen true if success, otherwise return false
+    @Mutation("deleteDepartment")
+    public boolean deleteDepartment(long departmentId) {
+       return  departmentRepository.deleteById(departmentId);
+    }
+
 }
