@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class DepartmentInput {
-	private Long id; //Ali add id field to update current department
+	private Long id; //add id field to update current department
 	private String name;
 	private Long organizationId;
 }

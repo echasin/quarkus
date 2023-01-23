@@ -64,13 +64,5 @@ public class DepartmentRepository implements PanacheRepository<Department> {
         criteriaQuery.where(builder.equal(root.get("id"), id));
         return em.createQuery(criteriaQuery).getSingleResult();
     }
-   
-
-    public  void deleteDepartment(Integer id) {
-        Department department = em.find(Department.class, id);
-        em.remove(department);
-
-    }
-    
 
 }
