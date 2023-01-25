@@ -4,6 +4,8 @@ import io.quarkus.runtime.StartupEvent;
 import org.demo.domain.Department;
 import org.demo.domain.Employee;
 import org.demo.domain.Organization;
+import org.demo.domain.Student;
+
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.event.Observes;
@@ -15,13 +17,16 @@ public class DemoDataStartup {
     private DepartmentRepository departmentRepository;
     private EmployeeRepository employeeRepository;
     private OrganizationRepository organizationRepository;
+    private StudentRepository studentRepository;
 
     public DemoDataStartup(DepartmentRepository departmentRepository,
                            EmployeeRepository employeeRepository,
-                           OrganizationRepository organizationRepository) {
+                           OrganizationRepository organizationRepository,
+                           StudentRepository studentRepository) {
         this.departmentRepository = departmentRepository;
         this.employeeRepository = employeeRepository;
         this.organizationRepository = organizationRepository;
+        this.studentRepository = studentRepository;
     }
 
     @Transactional
@@ -66,5 +71,10 @@ public class DemoDataStartup {
         employeeRepository.persist(e8);
         employeeRepository.persist(e9);
         employeeRepository.persist(e10);
+
+        Student s1 = new Student(null, "Student01", "{\n  \"studentName\": \"John Doe\",\n  \"testscores\": [\n    {\"course\": \"math\", \"score\": 95},\n    {\"course\": \"history\", \"score\": 85},  \n    {\"course\": \"english\", \"score\": 75}\n  ]\n}");
+        studentRepository.persist(s1);
+        Student s2 = new Student(null, "Student01", "{\n  \"studentName\": \"Jane Doe\",\n  \"testscores\": [\n    {\"course\": \"science\", \"score\": 90},\n    {\"course\": \"history\", \"score\": 80},  \n    {\"course\": \"english\", \"score\": 70}\n  ]\n}");
+        studentRepository.persist(s2);
     }
 }
