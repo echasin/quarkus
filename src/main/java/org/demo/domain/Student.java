@@ -18,6 +18,5 @@ public class Student {
 	@GeneratedValue
 	@EqualsAndHashCode.Include
 	private Long id;
-	private String studentIdentifier;
-	private String studentjson;
+	private String studentJson;
 }
