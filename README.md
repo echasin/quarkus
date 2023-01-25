@@ -5,6 +5,15 @@ This project uses Quarkus, the Supersonic Subatomic Java Framework.
 ## Resources
 - 
 ### GraphQL Examples
+Find All Students
+```shell script
+query{  students {
+  id,
+  studentIdentifier,
+  studentjson
+
+}}
+```
 Mutation Create new records
 ```shell script
 mutation {
