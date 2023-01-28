@@ -72,9 +72,11 @@ public class DemoDataStartup {
         employeeRepository.persist(e9);
         employeeRepository.persist(e10);
 
+         
         Student s1 = new Student(null, "Student01", "{\n  \"studentName\": \"John Doe\",\n  \"testscores\": [\n    {\"course\": \"math\", \"score\": 95},\n    {\"course\": \"history\", \"score\": 85},  \n    {\"course\": \"english\", \"score\": 75}\n  ]\n}");
         studentRepository.persist(s1);
         Student s2 = new Student(null, "Student01", "{\n  \"studentName\": \"Jane Doe\",\n  \"testscores\": [\n    {\"course\": \"science\", \"score\": 90},\n    {\"course\": \"history\", \"score\": 80},  \n    {\"course\": \"english\", \"score\": 70}\n  ]\n}");
         studentRepository.persist(s2);
+        
     }
 }

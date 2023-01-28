@@ -6,7 +6,6 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 @Data
@@ -18,5 +17,6 @@ public class Student {
 	@GeneratedValue
 	@EqualsAndHashCode.Include
 	private Long id;
+	private String studentIdentifier;
 	private String studentJson;
 }

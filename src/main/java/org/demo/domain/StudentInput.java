@@ -8,5 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class StudentInput {
+	private Long id ;
 	private String studentIdentifier ;
+	private String studentJson;
 }
