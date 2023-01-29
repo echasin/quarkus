@@ -31,7 +31,7 @@ public class StudentMutation {
     //return int number of updated records
     @Mutation("updateStudent")
     public int updateStudent(@Name("data") StudentInput studentInput) {
-       return studentRepository.update("name = ?2 where id = ?1");
+       return studentRepository.update("studentJson = ?1 where id = ?2", studentInput.getStudentJson(), studentInput.getId());
     }
 
   
