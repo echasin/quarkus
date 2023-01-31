@@ -18,5 +18,6 @@ public class Student {
 	@EqualsAndHashCode.Include
 	private Long id;
 	private String studentIdentifier;
+	@Column(length = 10000)
 	private String studentJson;
 }

@@ -37,8 +37,8 @@ public class StudentMutation {
   
     //return boolen true if success, otherwise return false
     @Mutation("deleteStudent")
-    public boolean deleteStudent(long studentId) {
-       return  studentRepository.deleteById(studentId);
+    public boolean deleteStudent(@Name("id")long id) {
+       return  studentRepository.deleteById(id);
     }
 
 }
